@@ -1,4 +1,5 @@
     //---start Infinite Scroll---//
+    
     let currentPage = 1
     let lastPage = 1
     window.addEventListener("scroll", function(){          
