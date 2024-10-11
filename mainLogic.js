@@ -140,11 +140,11 @@ function loginBtnClicked()
     password:password
 
 }
-toggleLoader(true)
+
 const url = `${baseUrl}/login`
 axios.post(url,params)
 .then((response) => {
-    toggleLoader(false)
+    
     localStorage.setItem ("token", response.data.token)
     localStorage.setItem ("user", JSON.stringify(response.data.user))
 
@@ -158,9 +158,7 @@ axios.post(url,params)
     const message = error.response.data.message
     showAlert(message, "danger")
 })
-.finally(() => {
-    toggleLoader(false)
-})
+
 
 }
 function registerBtnClicked()
@@ -179,7 +177,7 @@ function registerBtnClicked()
     const headers = {
         "Content-Type":"multipart/form-data"
     }
-    toggleLoader(true)
+    
     const url = `${baseUrl}/register`
     axios.post(url,formData,{
         headers: headers
@@ -199,9 +197,7 @@ function registerBtnClicked()
         const message = error.response.data.message
         showAlert(message, "danger")  
     })
-    .finally(() => {
-        toggleLoader(false)
-    })
+    
 
 }
 function logout() 
