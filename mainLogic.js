@@ -151,7 +151,7 @@ axios.post(url,params)
     const modal =document.getElementById("login-modal")
     const modalInstance = bootstrap.Modal.getInstance(modal)
     modalInstance.hide()
-    showAlert("logged in is successfuly", "success")
+    showAlert("logged in is successfully", "success")
     setupUI()
 })
 .catch((error) => {
@@ -190,7 +190,7 @@ function registerBtnClicked()
         const modal =document.getElementById("register-modal")
         const modalInstance = bootstrap.Modal.getInstance(modal)
         modalInstance.hide()
-        showAlert("New User Registered is successfuly", "success")
+        showAlert("New User Registered is successfully", "success")
         setupUI()
     }).catch((error) => {
         
@@ -204,7 +204,7 @@ function logout()
 {
     localStorage.removeItem("token")
     localStorage.removeItem("user")
-    showAlert("logged out is successfuly", "success")
+    showAlert("logged out is successfully", "success")
     setupUI()
 }
 function showAlert(customeMessage,type)
